@@ -1,0 +1,8 @@
+Hello {{ name }}
+
+We are here to help you prepare for the step of your life. Be it Placements or
+Higher Studies.
+
+Our courses and exams are built for any college students/professionals who are
+looking to enhance their skills for MBA or a better Job. We also provide best
+in-class Mentorship opportunities with experts in the Industry.

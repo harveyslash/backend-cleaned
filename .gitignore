@@ -1,0 +1,5 @@
+*.pyc
+docs/site
+.idea
+beatest/scratch/.ipynb_checkpoints
+*.el

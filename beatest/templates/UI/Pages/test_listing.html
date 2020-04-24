@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <link href="/statics/assets/img/brand/beatest.png" rel="icon" type="image/png">
+    <!-- Bootstrap core CSS -->
+    <link href="./statics/assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link type="text/css" href="/statics/assets/css/argon.css" rel="stylesheet">
+    <link href="/statics/assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./statics/assets/css/test_listing.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div class="navbar-brand">
+                <img src="https://raw.githubusercontent.com/Beatest-Edumock/magna/master/public/logos/beatest.png"
+                    alt="">
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
+                aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="burger"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar_global">
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-12 collapse-close">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Placement</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Sidebar -->
+        <div class="row">
+            <div class="col-lg-2" id="sidebar">
+                <div class="sidebar-heading">Filter By </div>
+                <div>
+                    <ul class="filter-list">
+                        <li class="btn-filter btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-primary active">
+                                <input type="radio" name="options" class="price" id="option1" autocomplete="off"
+                                    checked> Paid
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="radio" name="options" class="price" id="option2" autocomplete="off"> Free
+                            </label>
+                        </li>
+                        <li>
+                            <label class="complete" for="completed">COMPLETED</label>
+                            <input id="completed" type="Checkbox" name="completed" value="false">
+                        </li>
+                        <li class="btn-filter btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-primary active">
+                                <input type="radio" name="options" class="character" id="option1" autocomplete="off"
+                                    checked> Mock
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="radio" name="options" class="character" id="option2" autocomplete="off">
+                                Topic
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="radio" name="options" class="character" id="option3" autocomplete="off">
+                                Section
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-10 container-fluid">
+                <!-- <div class="filter_div">
+                <button class="filter btn btn-primary" id="menu-toggle">
+                    <i class="fas fa-filter"></i>
+                </button>
+            </div> -->
+                <h4 class="mt-4"> Test Page </h4>
+                <div class="test_listing" id="main_listing">
+                    {% block body %}
+                    {% for datas in data %}
+                    <div class="card test-card" style="width: 18rem;" data-json='{{ datas | tojson }}'>
+                        <img src="assets/img/recognition/scoopearth.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="name" class="card-title">{{datas.name}}</h5>
+                            <div class="card_info">
+                                <div class="new-data row ">
+                                    <div id="time" class="col">{{datas.total_time / 3600}}</div>
+                                    <div id="section" class="col">{{datas.section_count}}</div>
+                                    <div id="question" class="col">{{datas.quesiton_count}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Hours
+                                    </div>
+                                    <div class="col">
+                                        sections
+                                    </div>
+                                    <div class="col">
+                                        Questions
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary">Start</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        <!-- /#wrapper -->
+    </div>
+    {% include 'UI/Layout/footers/footer.html' %}
+    <script>
+        var obj = {
+            {
+                data | tojson
+            }
+        };
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.1/shuffle.js"></script>
+    <script src="/statics/assets/vendor/popper/popper.min.js"></script>
+    <script src="/statics/assets/vendor/headroom/headroom.min.js"></script>
+    <script src="./statics/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./statics/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./statics/assets/js/test_listing.js"></script>
+</body>
+
+</html>

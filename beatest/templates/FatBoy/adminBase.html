@@ -1,0 +1,22 @@
+{% extends 'admin/model/edit.html' %}
+
+{% block head %}
+
+    {{ super() }}
+
+    <style>
+        input[value="Save"], input[name="_add_another"] {
+            display: none;
+        }
+    </style>
+
+{% endblock %}
+
+{% block tail %}
+    {{ super() }}
+    <script type="text/javascript"
+            src="https://beatest-admin-ck-editor.s3.amazonaws.com/ckeditor.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+{% endblock %}

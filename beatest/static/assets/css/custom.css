@@ -1,0 +1,237 @@
+ html,
+ body {
+   overflow-x: hidden;
+ }
+
+ .work {
+   display: flex;
+   justify-content: space-around;
+   flex-direction: row;
+   flex-wrap: wrap;
+ }
+
+ .logo {
+   width: auto;
+   height: 40px !important;
+ }
+
+ footer {
+   background-color: rgb(107, 107, 107);
+   padding: 15px;
+   margin-top: 60px;
+ }
+
+ .position-relative {
+   background-image: linear-gradient(to bottom, rgb(66, 139, 202), rgb(132, 188, 238));
+ }
+
+ .headroom--not-top {
+   background-color: rgb(66, 139, 202) !important
+ }
+
+ header {
+   overflow-x: auto;
+ }
+
+ body {
+   font-family: 'Open Sans'sans-serif
+ }
+
+ .card {
+   margin-bottom: 15px;
+ }
+
+ .main-carousel img {
+   margin: 30px 70px 70px 70px;
+   max-height: 130px;
+   width: auto;
+ }
+
+ .main-carousel-2 {
+   background-color: grey;
+ }
+
+
+ .main-carousel-2 img {
+   margin: 30px 100px 70px 0px;
+   max-height: 80px;
+   width: auto;
+ }
+
+ .slider {
+   margin-top: 80px;
+   margin-bottom: 10px;
+   text-align: center;
+ }
+
+
+ .test {
+   background-color: #3ed1bd;
+ }
+
+ div {
+   text-align: center;
+ }
+
+ .main-carousel-3 img {
+   margin-top: 10px;
+   margin-bottom: 30px;
+   height: 750px;
+   width: auto;
+ }
+
+ .main-carousel-3 p {
+   font-style: italic;
+   font-size: 12px;
+   font-weight: 700;
+   color: grey;
+ }
+
+ .testimonial {
+   background-color: #f4f5f7;
+   padding: 10px;
+   margin: 20px;
+   width: 300px;
+   height: 350px;
+   box-shadow: .1px .1px 15px .2px rgb(195, 189, 189);
+ }
+
+ .testimonial img {
+   border-radius: 50%;
+   height: 60px;
+   width: auto;
+ }
+
+ .testimonial .name {
+   font-weight: bold;
+   color: rgb(66, 139, 202)
+ }
+
+ .testimonial .institution {
+   padding-bottom: 7px default;
+   font-weight: 700;
+   color: grey;
+   font-size: 12px;
+ }
+
+ q {
+   font-size: 12px;
+   quotes: "\201C""\201D""\2018""\2019";
+   padding: 10px 20px;
+   line-height: 1.4;
+ }
+
+ q:before {
+   content: open-quote;
+   display: inline;
+   height: 0;
+   line-height: 0;
+   left: -10px;
+   position: relative;
+   top: 5px;
+   color: rgb(66, 139, 202);
+   font-size: 2em;
+ }
+
+ q:after {
+   content: close-quote;
+   display: inline;
+   height: 0;
+   line-height: 0;
+   left: 10px;
+   position: relative;
+   top: 5px;
+   color: rgb(66, 139, 202);
+   font-size: 2em;
+ }
+
+ footer {
+   color: #fff;
+   background-color: rgb(107, 107, 107);
+ }
+
+ footer a {
+   color: #fff;
+
+ }
+
+ .form {
+   align-items: center;
+ }
+
+ .form button {
+   background-color: rgb(66, 139, 202);
+   color: white;
+   width: 100px;
+   border: none;
+   outline: none;
+   border-radius: 20px;
+   box-shadow: .1px .1px 15px .2px rgb(97, 95, 95);
+ }
+
+ .form_field {
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   margin-left: 40px;
+   margin-right: 40px;
+ }
+
+ footer input {
+   border-radius: 4px;
+   padding: 5px;
+ }
+
+ footer textarea {
+   border-radius: 4px;
+ }
+
+ .footer_info a {
+   padding-right: 10px;
+ }
+
+ footer a:hover {
+   color: #c5c5c5;
+ }
+
+
+
+
+ .card-body .btn {
+   background-color: rgb(66, 139, 202);
+   border: none;
+ }
+
+ .contact {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: space-around;
+ }
+
+ .address {
+   display: flex;
+   flex-direction: column;
+   line-height: 50px;
+   /* justify-content: space-; */
+ }
+
+ .address span {
+   padding-right: 20px;
+   font-size: 30px;
+   font-weight: bold;
+ }
+
+ .address-mid {
+   margin-top: 30px;
+   margin-bottom: 30px;
+
+ }
+
+ .has-error {
+   border: 1px solid red;
+ }
+
+ .error {
+   color: red
+ }

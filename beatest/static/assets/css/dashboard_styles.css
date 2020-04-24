@@ -1,0 +1,175 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.parent {
+    text-align: center;
+    position: relative;
+    /* max-height: 10vh */
+}
+
+.modal-title {
+    color: #8898aa
+}
+
+.over-img {
+    width: 13%;
+    position: absolute;
+    top: 70%;
+    left: 44%;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 5px rgb(39, 166, 202, 0.7);
+}
+
+.intro p {
+    margin: auto;
+    font-size: 20px;
+}
+
+.info {
+    position: relative;
+    width: 80%;
+    height: 20vh;
+    border: 1px solid black
+}
+
+@media only screen and (max-width: 700px) {
+    .over-img {
+        width: 20%;
+        left: 40%;
+    }
+}
+
+.information {
+    text-align: left !important;
+    flex-direction: column;
+}
+
+.profile p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.profile .para_heading {
+    font-weight: bold
+}
+
+.info_section {
+    margin-left: 20px;
+}
+
+ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited,
+a.ui-button,
+a:link.ui-button,
+a:visited.ui-button,
+.ui-button {
+    color: #757373;
+    text-decoration: none;
+    /* font-weight: 600; */
+}
+
+ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+
+    border: none;
+    font-weight: normal;
+    color: rgb(39, 166, 202) !important;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+
+    border: none;
+    background: inherit;
+    font-weight: normal;
+    color: #ffffff !important;
+
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+
+    border: none;
+    background: inherit;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+
+    cursor: text;
+    color: rgb(39, 166, 202) !important;
+    /* text-decoration: underline; */
+    transition: 0.3s;
+}
+
+.tabs {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info_heading {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.edit {
+    border: none;
+    outline: none;
+    background-color: white;
+    color: rgb(39, 166, 202);
+}
+
+.bio_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal-content {
+    background-color: #f4f5f7 !important;
+}
+
+.navbar {
+    background-color: rgb(39, 166, 202) !important;
+}
+.info_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+.info_button {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+}
+.flash {
+    margin-left: 8.33%;
+}
