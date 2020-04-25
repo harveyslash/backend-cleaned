@@ -1,0 +1,75 @@
+{% extends 'admin/master.html'%}
+{% block head %}
+
+    {{ super() }}
+
+    <style>
+        body{
+
+            }
+        .ABC {
+                background: linear-gradient(to bottom, #ffffff 8%, #66ccff 44%);
+                color: white;
+                text-align: center;
+                margin-left: 5px;
+                float: left;
+                width: 25%;
+                <!--padding: 0 10px;-->
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+                padding: 20px;
+                border-radius:5px;
+              }
+        .row {
+                margin: 0 -5px;
+                padding-left: 20px;
+                margin-left:20px;
+             }
+         .card{
+                background: linear-gradient(to bottom, #ffffff 8%, #66ccff 44%);
+                border-radius:5px;
+                width: 50;
+            }
+
+
+    </style>
+
+{% endblock %}
+{% block body %}
+{{ super() }}
+
+    <!--<div class="row col-md-12">-->
+        <!--<div class="col-sm-4 ABC">Test1</div>-->
+        <!--<div class="col-sm-4 ABC">Test2</div>-->
+        <!--<div class="col-sm-4 ABC">Test3</div>-->
+    <!--</div>-->
+    <div class="row">
+        <div class="col-sm-4 ">
+        <div class="card mb-3" style="max-width: 18rem;">
+          <div class="card-header">Test1</div>
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">Test Body</p>
+          </div>
+        </div>
+        </div>
+                <div class="col-sm-4 ">
+        <div class="card mb-3" style="max-width: 18rem;">
+          <div class="card-header">Header</div>
+          <div class="card-body">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">Test2</p>
+          </div>
+        </div>
+        </div>
+                <div class="col-sm-4 ">
+        <div class="card mb-3" style="max-width: 18rem;">
+          <div class="card-header">Header</div>
+          <div class="card-body">
+            <h5 class="card-title">Primary card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+        </div>
+    </div>
+        <div class="col-md-12 abc">{{test}}</div>
+{% endblock body %}

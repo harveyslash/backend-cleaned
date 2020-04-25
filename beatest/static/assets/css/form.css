@@ -1,0 +1,63 @@
+.forms {
+    position: relative;
+    margin: auto !important;
+    margin-top: 60px !important;
+    bottom: 35px;
+}
+
+.section-shaped {
+    background-image: linear-gradient(to bottom, rgb(66, 139, 202), rgb(139, 182, 223));
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.shape span {
+    background-image: linear-gradient(to bottom, rgb(66, 139, 202), purple);
+}
+
+.text-light {
+    color: white !important;
+}
+
+small,
+.small {
+    font-size: 1rem !important;
+    font-weight: 400;
+}
+
+.main-class {
+    display: flex;
+    justify-content: space-between !important;
+}
+
+.main-svg {
+    color: #653d45;
+}
+
+.card {
+    width: 478px !important;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around !important;
+}
+
+#email-error {
+    border: none !important;
+}
+
+label.error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 1px 20px 1px 20px;
+}
+
+@media (max-width: 700px) {
+    .svg {
+        display: none;
+    }
+}

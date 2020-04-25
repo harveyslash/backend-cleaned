@@ -1,0 +1,26 @@
+
+aws s3 cp s3://beatest-secret/prod.py /home/ec2-user/beatest-flask-rest-backend/beatest/configs/prod.py
+aws s3 cp s3://beatest-secret/pk-APKAJEHNA6ENB7AULEQQ.pem.txt /home/ec2-user/beatest-flask-rest-backend/beatest/configs/pk-APKAJEHNA6ENB7AULEQQ.pem.txt
+
+
+{
+sudo pip-3.6 install -r /home/ec2-user/beatest-flask-rest-backend/requirements.txt
+sudo pip-3.6 install "pycurl==7.19.5.1" --global-option="--with-nss"
+sudo pip-3.6 install pillow
+} || { echo "OK"
+};
+
+sudo cp /home/ec2-user/beatest-flask-rest-backend/.deploy_scripts/supervisord.conf  /etc/
+
+if [ "$DEPLOYMENT_GROUP_NAME" == "scheduler-server" ]
+then
+	sudo cp /home/ec2-user/beatest-flask-rest-backend/.deploy_scripts/supervisord-scheduler.conf  /etc/supervisord.conf
+fi
+
+sudo cp /home/ec2-user/beatest-flask-rest-backend/.deploy_scripts/nginx.conf  /etc/nginx/
+
+
+sudo service supervisord restart
+/usr/local/bin/supervisorctl restart all
+sudo service nginx restart
+touch /home/ec2-user/deployed.test

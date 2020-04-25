@@ -1,0 +1,4 @@
+Hello {{ name }}
+
+Thank you for purchasing Tests worth {{ amount }} from us. Please find the Order
+ ID #{{ order_id }} for any future correspondence.

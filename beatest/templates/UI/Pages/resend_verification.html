@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Simple Sidebar - Start Bootstrap Template</title>
+  <link href="/statics/assets/img/brand/beatest.png" rel="icon" type="image/png">
+  <!-- Bootstrap core CSS -->
+  <link href="./statics/assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link type="text/css" href="/statics/assets/css/argon.css" rel="stylesheet">
+  <link href="/statics/assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="/statics/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="./statics/assets/css/custom.css" rel="stylesheet">
+  <link href="./statics/assets/css/form.css" rel="stylesheet">
+</head>
+
+<body>
+  {% include 'UI/Layout/navbars/navbar.html' %}
+  <main>
+    <section class="section section-shaped section-lg pb-250">
+      <div class="shape shape-style-1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="container pt-lg-md">
+        <div class="row justify-content-center main-class">
+          <div class="col-lg-5">
+            <div class="card bg-secondary shadow border-0">
+              <div class="card-body px-lg-5 py-lg-5">
+                <div class="text-center text-muted mb-4">
+                  <small>Enter Your Mail</small>
+                </div>
+                <form role="form">
+                  <div class="form-group mb-3">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Email" type="email">
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button type="button" class="btn btn-primary my-4">Resend Verification Mail</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-6">
+                <a href="/forget-password" class="text-light">
+                  <small>Forgot password?</small>
+                </a>
+              </div>
+              <div class="col-6 text-right">
+                <a href="/signup" class="text-light">
+                  <small>Create new account</small>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="svg">
+            <img class="main-svg" src="statics/assets/img/svgs/resend.svg" height="350px" alt=""
+              style="position:relative; bottom: 30px; left: 160px">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  {% include 'UI/Layout/footers/footer.html' %}
+  <script src="/statics/assets/vendor/popper/popper.min.js"> </script>
+  <script src="/statics/assets/vendor/headroom/headroom.min.js"></script>
+  <script src="./statics/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="./statics/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./statics/assets/js/forms.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Profile Forms</title>
+	<link href="/statics/assets/img/brand/beatest.png" rel="icon" type="image/png">
+	<!-- Bootstrap core CSS -->
+	<link href="./statics/assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link type="text/css" href="/statics/assets/css/argon.css" rel="stylesheet">
+	<link rel="stylesheet"
+		href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+	<link href="/statics/assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+	<link href="./statics/assets/css/profileCSS/style.css" rel="stylesheet">
+	<link href="./statics/assets/css/profileCSS/responsive.css" rel="stylesheet">
+	<link href="./statics/assets/css/profileCSS/menu.css" rel="stylesheet">
+	<link href="./statics/assets/css/profileCSS/animate.min.css" rel="stylesheet">
+	<link href="./statics/assets/css/profileCSS/icon_fonts/css/all_icons_min.css" rel="stylesheet">
+	<link href="./statics/assets/css/profileCSS/skins/square/grey.css" rel="stylesheet">
+	<link href="./statics/assets/css/custom.css" rel="stylesheet">
+	<link href="./statics/assets/css/form.css" rel="stylesheet">
+	<link href="/statics/assets/css/profileCSS/profile_form.css" rel="stylesheet">
+
+	<script src="/statics/assets/js/modernizr.js"></script>
+</head>
+
+<body>
+	<main>
+		<section class="section section-shaped section-lg pb-250">
+			<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+				<div class="container">
+					<a class="navbar-brand" href="/">
+						<img class="logo" src="statics/assets/img/brand/beatest.png">
+					</a>
+				</div>
+			</nav>
+
+			<div class="shape shape-style-1">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div id="form_container">
+				<div class="row">
+					<div class="col-lg-5">
+						<div id="left_form">
+							<figure><img src="/statics/assets/img/profileForm/registration_bg.svg" alt=""></figure>
+							<h2>On Boarding</h2>
+						</div>
+					</div>
+					<div class="col-lg-7">
+
+						<div id="wizard_container">
+							<div id="top-wizard">
+								<div id="progressbar"></div>
+							</div>
+							<!-- /top-wizard -->
+							<form name="example-1" id="wrapped" onsubmit="sConsole(event)">
+								<input id="website" name="website" type="text" value="">
+								<!-- Leave for security protection, read docs for details -->
+								<div id="middle-wizard">
+
+									<div class="step">
+										<h3 class="main_question"><strong>1/3</strong>Please fill with your details</h3>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<div class="styled-select">
+														<select class="required" name="Hometown">
+															<option value="" selected>Select your Current City</option>
+															<option value="Bengal">Bengal</option>
+															<option value="Goa">Goa</option>
+															<option value="Assam">Assam</option>
+															<option value="MP">MP</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<div class="styled-select">
+														<select id="country" class="required" name="country">
+															<option value="" selected>Select your country</option>
+															<option value="Europe">Europe</option>
+															<option value="Asia">Asia</option>
+															<option value="North America">North America</option>
+															<option value="South America">South America</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+
+										</div>
+										<!-- /row -->
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<div class="styled-select">
+														<select class="required" name="state">
+															<option value="" selected>Select your State</option>
+															<option value="Bengal">Bengal</option>
+															<option value="Goa">Goa</option>
+															<option value="Assam">Assam</option>
+															<option value="MP">MP</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- /row -->
+									</div>
+									<!-- /step-->
+
+									<div class="step">
+										<h3 class="main_question"><strong>2/3</strong>Please Fill Your Educational info
+										</h3>
+										<div class="row">
+											<div class="col-md-10">
+												<div class="form-group">
+													<input placeholder="Institution" class="form-control required"
+														type="text" list="Institution">
+													<datalist id="Institution">
+														<option value="IIM">
+														<option value="JU">
+														<option value="CU">
+														<option value="MIT">
+														<option value="IIT">
+													</datalist>
+												</div>
+											</div>
+										</div>
+										<!-- /row -->
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<div class="styled-select">
+														<select class="required" name="degree">
+															<option value="" selected>Degree</option>
+															<option value="Bengal">Bsc</option>
+															<option value="Goa">Btech</option>
+															<option value="Assam">M.SC</option>
+															<option value="MP">M.tech</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<div class="styled-select">
+														<select class="required" name="specialization">
+															<option value="" selected>Specialization/Branch Name
+															</option>
+															<option value="Bengal">Electrical</option>
+															<option value="Goa">Electronics</option>
+															<option value="Assam">Computer</option>
+															<option value="MP">Civil</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label for="graduationYear"
+														style="color: rgb(180, 177, 177); position: relative; top: 10px; font-size: 1rem;">Year
+														of
+														Graduation</label>
+												</div>
+											</div>
+											<div class="col-md-8">
+												<div class="form-group">
+													<input type="date" name="achievementTo"
+														class="form-control required" placeholder="to">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" name="percentage"
+														class="float form-control required"
+														placeholder="Current/Final Percentage CGPA">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" name="fullMarks" class="form-control required"
+														placeholder="Out of">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+
+										</div>
+
+									</div>
+									<!-- /step-->
+
+
+									<div id="myForm" class="submit step">
+										<h3 class="main_question"><strong>3/3</strong>Work Experience</h3>
+										<div style="margin-bottom: 10px; color: rgb(165, 161, 161); font-size: 1.3rem;">
+											<label for="">Currently Not Working</label>
+											<input type="checkbox" id="yourBox" />
+										</div>
+
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" name="organisation" class="form-control required"
+														placeholder="Current/Last Organisation Name">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" name="position" class="form-control required"
+														placeholder="Position">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="workedForm"
+														style="color: rgb(180, 177, 177); position: relative; top: 10px; font-size: 1rem;">From</label>
+												</div>
+											</div>
+											<div class="col-md-9">
+												<div class="form-group">
+													<input type="date" name="workedForm" class="form-control required"
+														placeholder="to">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="form-group">
+													<label for="workedForm"
+														style="color: rgb(180, 177, 177); position: relative; top: 10px; font-size: 1rem;">To</label>
+												</div>
+											</div>
+											<div class="col-md-9">
+												<div class="form-group">
+													<input type="date" name="workedTo" class="form-control required"
+														placeholder="to">
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- /middle-wizard -->
+									<div id="bottom-wizard">
+										<button type="button" name="backward" class="backward">Back </button>
+										<button type="button" name="forward" class="forward">Next</button>
+										<button type="submit" name="process" class="submit">Submit</button>
+									</div>
+									<!-- /bottom-wizard -->
+							</form>
+						</div>
+						<!-- /Wizard container -->
+					</div>
+				</div><!-- /Row -->
+			</div><!-- /Form_container -->
+		</section>
+	</main>
+	{% include 'UI/Layout/footers/footer.html' %}
+	<script src="/statics/assets/vendor/popper/popper.min.js"></script>
+	<script src="/statics/assets/vendor/headroom/headroom.min.js"></script>
+	<script src="./statics/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="./statics/assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+	<!-- Common script -->
+	<script src="/statics/assets/js/common_scripts_min.js"></script>
+	<!-- Wizard script -->
+	<script src="/statics/assets/js/registration_wizard_func.js"></script>
+	<!-- Menu script -->
+	<script src="/statics/assets/js/velocity.min.js"></script>
+	<script src="/statics/assets/js/main.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+	<!-- Theme script -->
+	<script src="/statics/assets/js/functions.js"></script>
+	<script src="./statics/assets/js/forms.js"></script>
+	<script>
+		function sConsole(event) {
+			event.preventDefault()
+		}
+		$(document).ready(function () {
+			$("input").click(function () {
+				$(this).next().show();
+				$(this).next().hide();
+			});
+
+		});
+		$('#yourBox').click(function () {
+			if ($(this).is(':checked')) {
+				$(document).ready(function () {
+					$("#myForm .row :input").prop("disabled", true);
+				});
+			} else {
+				$(document).ready(function () {
+					$("#myForm .row :input").prop("disabled", false)
+				})
+			}
+		});
+	</script>
+</body>
+
+</html>

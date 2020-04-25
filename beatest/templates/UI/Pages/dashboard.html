@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="/statics/assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+    <link href="/statics/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link type="text/css" href="/statics/assets/css/argon.css" rel="stylesheet">
+    <link href="./statics/assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="./statics/assets/css/custom.css" rel="stylesheet">
+    <link href="./statics/assets/css/form.css" rel="stylesheet">
+    <link rel="stylesheet" href="./statics/assets/css/dashboard_styles.css">
+</head>
+
+<body>
+    <div class="modal modal-edu-create fade" id="myModalEduAdd" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabelEduCreate" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="display: flex; justify-content: space-between">
+                    <h4 class="modal-title" id="myModalLabelEduCreate">Add Education</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body modal-edu-body-create">
+                    <form id="addEducation" action="">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="type" placeholder="Type" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="institution" placeholder="Institution"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="date" name="from" placeholder="Form" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="date" name="to" placeholder="To" required>
+                        </div>
+                        <button class="btn btn-primary form-control" type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal modal-work-create fade" id="myModalWorkAdd" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabelWorkCreate" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="display: flex; justify-content: space-between">
+                    <h4 class="modal-title" id="myModalLabelWorkCreate">Add Work</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body modal-work-body-create">
+                    <form id="addWork" action="">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="company" placeholder="Company" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="designation" placeholder="Designation"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="date" name="from" placeholder="Form" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="date" name="to" placeholder="To" required>
+                        </div>
+                        <button class="btn btn-primary form-control" type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal modal-accom-create fade" id="myModalAccomAdd" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabelAccomCreate" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="display: flex; justify-content: space-between">
+                    <h4 class="modal-title" id="myModalLabelAccomCreate">Add Accomplishment</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body modal-accom-body-create">
+                    <form id="addAccom" action="">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="accomplishment" placeholder="accomplishment"
+                                required>
+
+                        </div>
+                        <button class="btn btn-primary form-control" type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-skill-create fade" id="myModalSkillAdd" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabelSkillCreate" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="display: flex; justify-content: space-between">
+                    <h4 class="modal-title" id="myModalLabelSkillCreate">Add Skill</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body modal-skill-body-create">
+                    <form id="addSkill" action="">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="skillLearnt" placeholder="skillLearnt"
+                                required>
+
+                        </div>
+                        <button class="btn btn-primary form-control" type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-bio-create fade" id="myModalBioAdd" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabelBioCreate" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="display: flex; justify-content: space-between">
+                    <h4 class="modal-title" id="myModalLabelBioCreate">Add Skill</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body modal-bio-body-create">
+                    <form id="addBio" action="">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="biography" placeholder="biography" required
+                                height=200px>
+
+                        </div>
+                        <button class="btn btn-primary form-control" type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+        <div class="container">
+            <a class="navbar-brand mr-lg-5" href="/">
+                <img class="logo" src="statics/assets/img/brand/beatest.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
+                aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar_global">
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-12 collapse-close">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="/" target="_blank" data-toggle="tooltip">
+                            <span class="nav-link-inner--text">Log Out</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="/test" target="_blank" data-toggle="tooltip">
+                            <span class="nav-link-inner--text">Placement</span>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="/login" target="_blank" data-toggle="tooltip">
+                            <span class="nav-link-inner--text">Log In</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="/signup" target="_blank" data-toggle="tooltip">
+                            <span class="nav-link-inner--text">Sign Up</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="/test" target="_blank" data-toggle="tooltip">
+                            <span class="nav-link-inner--text">Placement</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="/test" target="_blank" data-toggle="tooltip">
+                            <img src="statics/assets/img/dashboard/images.png" width="30px" style="border-radius:50%;">
+                        </a>
+                    </li>
+                    {% endif %}
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+
+        <div class="parent mt-5">
+            <img class="img-fluid col-lg-11 col-sm-12 justify-content-center mt-5"
+                src="./statics/assets/img/dashboard/cover.jpg" />
+            <img class="img-fluid over-img" src="./statics/assets/img/dashboard//dp.jpg" />
+
+        </div>
+        <div class="row justify-content-center mt-5 pt-5">
+            <div class="intro col-9">
+                <h3>Jack Ma</h3>
+                <p>Hello everyone ! There are many variations of passages of Lorem Ipsum available, but the majority
+                    have
+                    suffered alteration in some form, by injected humour.</p>
+            </div>
+        </div>
+        <div id="rowFlashMsg" class="col-lg-12 col-md-10 col-sm-11 mt-5 justify-content-center"></div>
+    </div>
+    <div class="row main justify-content-center">
+        <div id="tabs" class="info_section col-lg-10 col-md-10 col-sm-11 mt-5">
+            <ul class="tabs">
+                <li><a href="#tabs-1">Profile</a></li>
+                <li><a href="#tabs-2">Assesments</a></li>
+            </ul>
+            <div id="tabs-1">
+                <div class="profile">
+                    <div class="biography information d-flex justify-content-start">
+                        <div class="info_heading">
+                            <h4>Biography</h4>
+                            <button type="button" id="bioButton" class="btn btn-primary my-1" data-toggle="modal"
+                                data-target="#myModalBioAdd"><i class="fas fa-plus"></i></button>
+
+                        </div>
+                        <div id="bio"></div>
+                    </div>
+                    <hr>
+                    <div class="information d-flex justify-content-start">
+                        <div class="info_heading">
+                            <h4>Education</h4>
+                            <button class="btn btn-primary my-1" data-toggle="modal" data-target="#myModalEduAdd"><i
+                                    class="fas fa-plus"></i></button>
+                        </div>
+                        <div id="education"></div>
+                    </div>
+                    <hr>
+                    <div class="information d-flex justify-content-start">
+                        <div class="info_heading">
+                            <h4>Work Experience</h4>
+                            <button class="btn btn-primary my-1" data-toggle="modal" data-target="#myModalWorkAdd"><i
+                                    class="fas fa-plus"></i></button>
+                        </div>
+                        <div id="work"></div>
+                    </div>
+                    <hr>
+                    <div class="information d-flex justify-content-start">
+                        <div class="info_heading">
+                            <h4>Accomplishments</h4>
+                            <button class="btn btn-primary my-1" data-toggle="modal" data-target="#myModalAccomAdd"><i
+                                    class="fas fa-plus"></i></button>
+                        </div>
+                        <div id="accom"></div>
+
+                    </div>
+                    <hr>
+                    <div class="information d-flex justify-content-start">
+                        <div class="info_heading">
+                            <h4>Skills</h4>
+                            <button class="btn btn-primary my-1" data-toggle="modal" data-target="#myModalSkillAdd"><i
+                                    class="fas fa-plus"></i></button>
+                        </div>
+                        <div id="skill"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-2">
+
+            </div>
+        </div>
+        <div class="col-2">
+
+        </div>
+    </div>
+
+    <div class="modal modal-edu-update fade" id="myModalEduUpdate" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabelEduUpdate" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="display: flex; justify-content: space-between">
+
+                    <h4 class="modal-title" id="myModalLabelEduUpdate">Update Education</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body modal-edu-body-update"></div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-work-update fade" id="myModalWorkUpdate" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabelWorkCreate" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="display: flex; justify-content: space-between">
+
+                    <h4 class="modal-title" id="myModalLabelWorkCreate">Update User</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body modal-work-body-update"></div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal modal-accom-update fade" id="myModalAccomUpdate" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabelAccomCreate" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="display: flex; justify-content: space-between">
+
+                    <h4 class="modal-title" id="myModalLabelAccomCreate">Update User</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body modal-accom-body-update"></div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-skill-update fade" id="myModalSkillUpdate" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabelSkillCreate" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="display: flex; justify-content: space-between">
+
+                    <h4 class="modal-title" id="myModalLabelSkillreate">Update User</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body modal-skill-body-update"></div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal modal-bio-update fade" id="myModalBioUpdate" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabelBioCreate" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="display: flex; justify-content: space-between">
+
+                    <h4 class="modal-title" id="myModalLabelBioCreate">Update User</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body modal-bio-body-update"></div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    {% include 'UI/Layout/footers/footer.html' %}
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./statics/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./statics/assets/js/jquery-ui.js"></script>
+    <script src="./statics/assets/js/dashboard_app.js"></script>
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+</body>
+
+</html>

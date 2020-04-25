@@ -1,0 +1,72 @@
+<!-- navbar for our pages -->
+
+
+<header class="header-global">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+        <div class="container">
+            <a class="navbar-brand mr-lg-5" href="/">
+                <img class="logo" src="statics/assets/img/brand/beatest.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
+                aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar_global">
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-12 collapse-close">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="/" target="_blank" data-toggle="tooltip">
+                            <span class="nav-link-inner--text">Log Out</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="/test" target="_blank" data-toggle="tooltip">
+                            <span class="nav-link-inner--text">Placement</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="/test" target="_blank" data-toggle="tooltip">
+                            <img src="statics/assets/img/dashboard/images.png" width="30px" style="border-radius:50%;">
+                        </a>
+                    </li>
+
+
+                    {% else %}
+                    {% if request.path == "/login" %}
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="/login" target="_blank" data-toggle="tooltip">
+                            <span class="nav-link-inner--text">Log In</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="/signup" target="_blank" data-toggle="tooltip">
+                            <span class="nav-link-inner--text">Sign Up</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="/test" target="_blank" data-toggle="tooltip">
+                            <span class="nav-link-inner--text">Placement</span>
+                        </a>
+                    </li>
+                    {% endif %}
+
+
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

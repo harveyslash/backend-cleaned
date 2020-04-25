@@ -1,0 +1,44 @@
+/*============================================================================================*/
+/* Your custom styles below */
+/*============================================================================================*/
+* {
+    font-family: 'Open Sans'sans-serif !important;
+}
+
+#navbar-main {
+    font-size: inherit !important;
+}
+
+h2,
+h3 {
+    font-size: 2rem;
+}
+
+.navbar-brand {
+    margin-right: 90%;
+}
+
+@media only screen and (max-width: 992px) {
+    #left_form {
+        text-align: left !important;
+        padding: 20px 5px 20px 5px !important;
+        min-height: 200px;
+    }
+
+    #navbar-main {
+        max-height: 100px !important;
+        margin: 0px;
+    }
+}
+
+.section-lg {
+    padding-top: 4rem !important;
+}
+
+#left_form {
+    background-color: #653d45 !important;
+}
+
+.styled-select select {
+    font-weight: bold !important;
+}

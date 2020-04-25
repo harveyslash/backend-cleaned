@@ -1,0 +1,12 @@
+rm -r /home/ec2-user/beatest-flask-rest-backend/
+mkdir /home/ec2-user/beatest-flask-rest-backend/
+
+sudo pip-3.6 install aws-xray-sdk
+sudo pip-3.6 install flask_admin
+
+{
+	sudo yum install -y https://s3.dualstack.us-east-2.amazonaws.com/aws-xray-assets.us-east-2/xray-daemon/aws-xray-daemon-2.x.rpm
+	sudo yum install libcurl-devel
+} || {
+echo "OK"
+};
