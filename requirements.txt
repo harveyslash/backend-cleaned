@@ -48,7 +48,7 @@ ipywidgets==7.1.2
 isort==4.3.4
 itsdangerous==0.24
 jedi==0.11.1
-Jinja2==2.10
+Jinja2==2.11.3
 jmespath==0.9.3
 json2html==1.2.1
 jsonpickle==0.9.6
