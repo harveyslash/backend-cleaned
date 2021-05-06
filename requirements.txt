@@ -26,7 +26,7 @@ flake8==3.5.0
 Flask==1.0
 Flask-Bcrypt==0.7.1
 Flask-Celery-Helper==1.1.0
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 Flask-Limiter==1.0.1
 -e git://github.com/maxcountryman/flask-login.git@848088a9fc6e8c9c418e8820e072cde6ac81dc00#egg=Flask_Login
 Flask-Mail==0.9.1
